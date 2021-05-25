@@ -1,0 +1,31 @@
+// Mualla Argin 728003004
+
+
+/**
+ * Shift x left by y bits, new bits are filled in with 0
+ * The maximum shift is 15 bits (in other words, y is in the binary range 0000 to 1111)
+ * x and y are UNSIGNED
+ * Any overflow is dropped
+ */
+
+CHIP LeftLogicBitshift {
+    IN x[16], y[4];
+    OUT out[16];
+
+    PARTS:
+    // Shift by 1 bit
+    Mux16(a=x,b[0]=false, b[1..15]=x[0..14],sel=y[0],out=shift1,out[0..13]=partmux1);
+
+    // Shift by 2 bit
+    Mux16(a=shift1,b[0..1]=false,b[2..15]=partmux1,sel=y[1],out=shift2,out[0..11]=partmux2);
+
+    // Shift by 4 bit
+    Mux16(a=shift2,b[0..3]=false,b[4..15]=partmux2,sel=y[2],out=shift3,out[0..7]=partmux3);
+
+    // Shift by 8 bit
+    Mux16(a=shift3,b[0..7]=false,b[8..15]=partmux3,sel=y[3],out=out);
+
+
+   
+
+}
