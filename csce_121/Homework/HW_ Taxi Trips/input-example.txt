@@ -1,0 +1,11 @@
+Taxi_0 660 1.1 9.05 4 CreditCard
+Taxi_1 300 1.0 5.25 0 Cash
+Taxi_2 540 1.1 800.01 4200 Cash
+Taxi_3 360 1.85 5.45 2 CreditCard
+Taxi_4 180 1.1 4.65 0 Cash
+Taxi_5 60 1.0 3.25 0 Cash
+Taxi_2 300 1.8 6.05 3.95 Cash
+Taxi_7 840 2.8 10.45 3 Cash
+Taxi_8 1080 9.3 21.05 5 Cash
+Taxi_1 600 0.9 4.25 0.75 Unknown
+Taxi_21 3600 40 121.11 20 CreditCard
