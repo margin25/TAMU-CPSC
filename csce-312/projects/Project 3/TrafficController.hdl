@@ -1,0 +1,88 @@
+// Mualla Argin 728003004
+
+/**
+ * Inputs: reset
+
+ * A traffic signal has 3 light stages: RED(R), YELLOW(Y), GREEN(G)
+ * The lights change based on a Timer running on system clock
+ * The Timer starts at 0000, and increments by 1 every clock cycle. The
+ * Timer wraps to 0000 when it reaches a count of 15.  
+ * In other words, count=<0,1,2,3,4,5,6,....,15,0,1,2,...>
+ * The Timer's count value is used in traffic light transition
+ 
+ * Timer starts at count == 0 with RED light state
+ 
+ * The traffic controller enables the traffic light as follows:
+ 	* RED: means STOP while count < 3  
+		* RED --> GREEN at count == 3       
+ 	* GREEN: means GO while 3 <= count < 12
+		* GREEN --> YELLOW at count == 12
+	* YELLOW: means PREPARE TO STOP while 12 <= count < 15
+		* YELLOW to RED: at count === 15
+ 
+ * Anytime RESET is turned ON (reset == 1) the controller resets the count and 
+ * brings the traffic light to RED
+
+ * Outputs 
+
+ * 2-bit signal light[2] for traffic light based on internal 
+ * timer running on the system clock signal.
+ * Uses encoding: light[0..1]==00 for red, light[0..1]==10 for green, and light[0..1]==01 for yellow;
+
+ * 4-bit signal count showing the state of the Timer
+ * count[0..3]
+
+ */
+
+CHIP TrafficController {
+
+    IN reset;
+    OUT count[4], light[2];
+
+	PARTS:
+	// red = a'b'c'd' + abcd
+	// green = a'b'cd
+	// yellow = abc'd'
+
+	PC(inc = true, reset = reset, out[0..3] = count, out[0]=out1, out[1]=out2, out[2]=out3, out[3]=out4);
+	Not(in = out1, out = notout1);
+	Not(in = out2, out = notout2);
+	Not(in = out3, out = notout3);
+	Not(in = out4, out = notout4);
+	
+	// check for 15 - resets to 0
+	// abcd
+	And(a = out1, b = out2, out = d1);
+	And(a = out3, b = out4, out = d2);
+	And(a = d1, b = d2, out = end);
+
+	// check for 0 - start
+	// a'b'c'd'
+	And(a = notout1, b = notout2, out = and1);
+	And(a = notout3, b = notout4, out = and2);
+	And(a = and1, b = and2, out = andend);
+
+	
+	// a'b'c'd' + abcd
+	Or(a = andend, b = end, out = selred);
+
+	// red
+	Mux16(a[0..1]=prev, b[0..1] = false, sel=selred, out[0..1] = r1);
+
+	// green
+	And(a=d1, b = and2, out=selgreen);
+	Mux16(a[0..1] = r1, b[0] = true , b[1] = false , sel = selgreen , out[0..1] = r2);
+
+	// yellow
+	And(a = and1, b = d2, out = selyellow);
+	Mux16(a[0..1]= r2, b[0] = false , b[1] = true , sel = selyellow , out[0..1] = r3 , out[0..1] = light);
+	
+	Register(in[0..1] = r3 , load = true, out[0..1] = prev);
+
+	
+ 
+
+
+
+	
+}

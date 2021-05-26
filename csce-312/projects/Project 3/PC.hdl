@@ -1,0 +1,23 @@
+// Mualla Argin 728003004
+
+/**
+ * A 16-bit counter with load and reset control bits.
+ * if      (reset[t] == 1) out[t+1] = 0
+ * else if (load[t] == 1)  out[t+1] = in[t]
+ * else if (inc[t] == 1)   out[t+1] = out[t] + 1  (integer addition)
+ * else                    out[t+1] = out[t]
+ */
+
+CHIP PC {
+    IN in[16],load,inc,reset;
+    OUT out[16];
+
+    PARTS:
+    // Lecture Video V11 (https://www.youtube.com/watch?v=VFNO_Lkrv0o&feature=youtu.be)
+    // at timestamp 54:56 showcases the process of constructing the program counter.
+    Inc16(in=input,out=incout);
+	Mux16(a=input,b=incout,sel=inc,out=muxout);
+	Mux16(a=muxout,b=in,sel=load,out=muxout2);
+	Mux16(a=muxout2,b[0..15]=false,sel=reset,out=mux2register);
+	Register(in=mux2register,load=true,out=out,out=input);
+}
