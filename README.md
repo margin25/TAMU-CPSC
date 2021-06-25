@@ -10,27 +10,27 @@ ENGR 102 : Engineering Lab I Computation <br/>
 MATH 151 : Engineering Math I <br/>
 
 ### Spring 2020 
-ENGR 491 : Research 
-HIST 105 : History of the U.S. I
-MATH 152 : Engineering Math II
-PERF 301 : Perf in World Cultures
-PHYS 216 : Ex Phys Engr Lab II Mechanics
-POLS 207 : State and Local Government 
+ENGR 491 : Research <br/>
+HIST 105 : History of the U.S. I <br/>
+MATH 152 : Engineering Math II <br/>
+PERF 301 : Perf in World Cultures <br/>
+PHYS 216 : Ex Phys Engr Lab II Mechanics <br/>
+POLS 207 : State and Local Government <br/>
 
 ### Fall 2020 
-ATMO 201 : Weather & Climate
-CSCE 121 : Intro Pgm Design Concept
-CSCE 222 : Discrete Structure Computing
-MATH 304 : Linear Algebra
-STAT 211 : Principle of Statistics I
-ENGR 181 : Hnr Engineering Honors Seminar 
+ATMO 201 : Weather & Climate <br/>
+CSCE 121 : Intro Pgm Design Concept <br/>
+CSCE 222 : Discrete Structure Computing <br/>
+MATH 304 : Linear Algebra <br/>
+STAT 211 : Principle of Statistics I <br/>
+ENGR 181 : Hnr Engineering Honors Seminar <br/>
 
 ### Spring 2021 
-ACCT 209 : Survey of Acct Principles
-CSCE 221 : Data Structures & Algorithms
-CSCE 312 : Computer Organization 
-CSCE 314 : Programming Languages 
-HIST 106 : History of the U.S. II
+ACCT 209 : Survey of Acct Principles <br/>
+CSCE 221 : Data Structures & Algorithms <br/>
+CSCE 312 : Computer Organization <br/>
+CSCE 314 : Programming Languages <br/>
+HIST 106 : History of the U.S. II <br/>
 
 
 
