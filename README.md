@@ -3,11 +3,11 @@ An Aggie does not lie, cheat or steal or tolerate those who do.
 
 ## Classes I Took :
 ### Fall 2019
-ANTH 205 : People & Cultures of the World 
-CHEM 107 : General Chemistry for Engineers
-CHEM 117 : General Chemistry for Engineers LAB
-ENGR 102 : Engineering Lab I Computation
-MATH 151 : Engineering Math I
+ANTH 205 : People & Cultures of the World  <br/>
+CHEM 107 : General Chemistry for Engineers <br/>
+CHEM 117 : General Chemistry for Engineers LAB <br/>
+ENGR 102 : Engineering Lab I Computation <br/>
+MATH 151 : Engineering Math I <br/>
 
 ### Spring 2020 
 ENGR 491 : Research 
