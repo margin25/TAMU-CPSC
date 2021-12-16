@@ -29,7 +29,6 @@ ENGR 181 : Hnr Engineering Honors Seminar <br/>
 ACCT 209 : Survey of Acct Principles <br/>
 CSCE 221 : Data Structures & Algorithms <br/>
 CSCE 312 : Computer Organization <br/>
-CSCE 314 : Programming Languages <br/>
 HIST 106 : History of the U.S. II <br/>
 
 
