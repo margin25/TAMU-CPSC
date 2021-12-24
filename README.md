@@ -35,7 +35,7 @@ HIST 106 : History of the U.S. II <br/>
 COMM 203 : Public Speaking <br/>
 CSCE 314 : Programming Languages <br/>
 CSCE 411 : Design Anlysis Algorithms <br/>
-HIST 106 : Engineering Product Lean Launch <br/>
+ENGR 461 : Engineering Product Lean Launch <br/>
 
 
 
