@@ -31,5 +31,11 @@ CSCE 221 : Data Structures & Algorithms <br/>
 CSCE 312 : Computer Organization <br/>
 HIST 106 : History of the U.S. II <br/>
 
+### Fall 2021
+COMM 203 : Public Speaking <br/>
+CSCE 314 : Programming Languages <br/>
+CSCE 411 : Design Anlysis Algorithms <br/>
+HIST 106 : Engineering Product Lean Launch <br/>
+
 
 
