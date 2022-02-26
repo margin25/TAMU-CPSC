@@ -37,5 +37,13 @@ CSCE 314 : Programming Languages <br/>
 CSCE 411 : Design Anlysis Algorithms <br/>
 ENGR 461 : Engineering Product Lean Launch <br/>
 
+### Spring 2022
+CHEN 460 : Quantitative Risk Analysis in Safety Engineering <br/>
+CSCE 181 : Intro to Computing <br/>
+CSCE 313 : Introduction to Computer Systems <br/>
+CSCE 315 : Programming Studio <br/>
+ENGR 262 : Entrepreneurship Hour <br/>
+SENG 312 : System Safety Engineering <br/>
+
 
 
