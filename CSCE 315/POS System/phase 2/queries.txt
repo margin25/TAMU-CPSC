@@ -1,0 +1,49 @@
+out of stock items - amount_available == 0:
+   
+SELECT item_name FROM inventory
+WHERE amount_available = 0
+												
+												
+SELECT * FROM inventory;  // show inventory table
+SELECT * FROM menu; // show menu table
+SELECT * FROM trends; // show trends table
+
+
+// These commands display items by type
+
+SELECT item_name FROM inventory
+WHERE item_type = 'Food';
+
+SELECT item_name FROM inventory
+WHERE item_type = 'Bib';
+
+SELECT item_name FROM inventory
+WHERE item_type = 'Bottles';
+
+SELECT item_name FROM inventory
+WHERE item_type = 'Serving';
+
+SELECT item_name FROM inventory
+WHERE item_type = 'Janitorial';
+
+// This command shows the menu item that costs less than x dollars. If someone wonders what they can buy with x dollars, we can use this command
+SELECT menu_name FROM menu
+WHERE price < x;      
+
+
+// most times and item was sold
+SELECT menu_id, MAX(times_ordered) FROM trends GROUP BY menu_id;
+
+
+// Least times an item was sold in a day
+SELECT menu_id, MIN(times_ordered) FROM trends GROUP BY menu_id;
+
+// Shows the item_names in inventory in descending order based on the amount_available.
+SELECT amount_available, item_name FROM inventory ORDER BY amount_available DESC;
+
+// shows the menu_id, the amount a menu item was ordered and the date it was ordered of an item that was ordered less than x times.
+SELECT menu_id,times_ordered,trend_date FROM trends WHERE times_ordered < x;
+
+
+// shows the item names and amount available of items in inventory that has an availability less than x.
+SELECT item_name,amount_available FROM inventory WHERE amount_available < x;
