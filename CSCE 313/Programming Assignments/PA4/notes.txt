@@ -1,0 +1,13 @@
+for info on mq, man mq_overview
+for info on shm, man shm_overview
+for info on sem, man sem_overview 
+for shm rc, semaphores for synch 
+
+for client: 
+    - new arg i; values {f,q, s}
+        -> denotes IPC method to use
+    - modify arg c; it takes a int value
+        -> the value denotes number of data channels
+    - for multiple datapoint transfer with c arg
+        -> repeat work c times
+            * for i to c, use ith chan to write to xi.csv

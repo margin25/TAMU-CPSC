@@ -1,0 +1,6 @@
+1 - doc/ppt workthrough 
+2 - starter code walkthrough(namely request channel and FIFO relationship)
+3 - client implementation 
+4 - modification to server 
+5 - MQ implementation (rlimit)
+6 - SHM implementation (w/SHMQueue)
