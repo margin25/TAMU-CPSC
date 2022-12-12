@@ -45,5 +45,13 @@ CSCE 315 : Programming Studio <br/>
 ENGR 262 : Entrepreneurship Hour <br/>
 SENG 312 : System Safety Engineering <br/>
 
+### Fall 2022
+CSCE 412 : Cloud Computing <br/>
+CSCE 420 : Artificial Intelligence <br/>
+CSCE 431 : Software Engineering <br/>
+CSCE 436 : Human Computer Interaction <br/>
+KINE 199 : Basketball <br/>
+STAT 212 : Statistics II <br/>
+
 
 
