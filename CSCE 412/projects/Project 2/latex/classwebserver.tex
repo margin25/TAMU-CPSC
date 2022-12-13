@@ -1,0 +1,85 @@
+\hypertarget{classwebserver}{}\doxysection{webserver Class Reference}
+\label{classwebserver}\index{webserver@{webserver}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}{webserver}} ()
+\item 
+\mbox{\hyperlink{classwebserver_af909efd5f3b665ae872974146958216e}{webserver}} (char c)
+\item 
+void \mbox{\hyperlink{classwebserver_af838677b074c26de4ee370da158b65cf}{add\+\_\+request}} (\mbox{\hyperlink{classrequest}{request}} req, int current\+\_\+time)
+\item 
+\mbox{\hyperlink{classrequest}{request}} \mbox{\hyperlink{classwebserver_ab6f31fba9ee8588e9a35289c972a53f2}{get\+\_\+request}} ()
+\item 
+char \mbox{\hyperlink{classwebserver_a0e812ca6ff0422edb7dcf29c571e9f46}{get\+\_\+name}} ()
+\item 
+bool \mbox{\hyperlink{classwebserver_ae25e5e3c69da3fe4b2e69b1404a711f9}{is\+\_\+request\+\_\+done}} (int current\+\_\+time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}\label{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}} 
+\index{webserver@{webserver}!webserver@{webserver}}
+\index{webserver@{webserver}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{webserver()}{webserver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily webserver\+::webserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default Constructor \+: initializes request start time to 0. initializes server name to \textquotesingle{} \textquotesingle{}. \mbox{\Hypertarget{classwebserver_af909efd5f3b665ae872974146958216e}\label{classwebserver_af909efd5f3b665ae872974146958216e}} 
+\index{webserver@{webserver}!webserver@{webserver}}
+\index{webserver@{webserver}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{webserver()}{webserver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily webserver\+::webserver (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overloaded Constructor \+: initializes request start time to 0. initializes server name to char. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwebserver_af838677b074c26de4ee370da158b65cf}\label{classwebserver_af838677b074c26de4ee370da158b65cf}} 
+\index{webserver@{webserver}!add\_request@{add\_request}}
+\index{add\_request@{add\_request}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{add\_request()}{add\_request()}}
+{\footnotesize\ttfamily void webserver\+::add\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrequest}{request}}}]{req,  }\item[{int}]{current\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds request to server 
+\begin{DoxyParams}{Parameters}
+{\em req,request} & being added \\
+\hline
+{\em current\+\_\+time,time} & @ which request was added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebserver_a0e812ca6ff0422edb7dcf29c571e9f46}\label{classwebserver_a0e812ca6ff0422edb7dcf29c571e9f46}} 
+\index{webserver@{webserver}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily char webserver\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+obtains server name \begin{DoxyReturn}{Returns}
+char, returns char that refers to the server name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebserver_ab6f31fba9ee8588e9a35289c972a53f2}\label{classwebserver_ab6f31fba9ee8588e9a35289c972a53f2}} 
+\index{webserver@{webserver}!get\_request@{get\_request}}
+\index{get\_request@{get\_request}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{get\_request()}{get\_request()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrequest}{request}} webserver\+::get\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+obtains request from the server \begin{DoxyReturn}{Returns}
+Request, returns current request that is being run by the server. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebserver_ae25e5e3c69da3fe4b2e69b1404a711f9}\label{classwebserver_ae25e5e3c69da3fe4b2e69b1404a711f9}} 
+\index{webserver@{webserver}!is\_request\_done@{is\_request\_done}}
+\index{is\_request\_done@{is\_request\_done}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{is\_request\_done()}{is\_request\_done()}}
+{\footnotesize\ttfamily bool webserver\+::is\+\_\+request\+\_\+done (\begin{DoxyParamCaption}\item[{int}]{current\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns whether a request has been completed. 
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+time,current} & time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true if request completed (otherwise false) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+webserver.\+cpp\end{DoxyCompactItemize}

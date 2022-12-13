@@ -1,0 +1,107 @@
+\hypertarget{classloadbalancer}{}\doxysection{loadbalancer Class Reference}
+\label{classloadbalancer}\index{loadbalancer@{loadbalancer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloadbalancer_ad453fd2fc0c910f82ef31c18353fc774}{loadbalancer}} ()
+\item 
+int \mbox{\hyperlink{classloadbalancer_a84910810fca4d9aeb75517515a60d661}{get\+\_\+time}} ()
+\item 
+void \mbox{\hyperlink{classloadbalancer_ac50cf405c85d9330f9f29a2582b850eb}{inc\+\_\+time}} ()
+\item 
+void \mbox{\hyperlink{classloadbalancer_adb46d81d993a749071697e69a290a7aa}{add\+\_\+request}} (\mbox{\hyperlink{classrequest}{request}} r)
+\item 
+\mbox{\hyperlink{classrequest}{request}} \mbox{\hyperlink{classloadbalancer_aed0c273a09a1539948c9b7efdbd3b4a8}{get\+\_\+request}} ()
+\item 
+\mbox{\hyperlink{classrequest}{request}} \mbox{\hyperlink{classloadbalancer_af0a2c5d7f5b0b657ef5fc9c25838a7f7}{create\+\_\+random\+\_\+request}} ()
+\item 
+bool \mbox{\hyperlink{classloadbalancer_a498c6da3c1d10bd443a19c0c714bc1f9}{is\+\_\+rq\+\_\+empty}} ()
+\item 
+int \mbox{\hyperlink{classloadbalancer_ace2478d5c442563e1861ad7cb8d1cd56}{rq\+\_\+size}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classloadbalancer_ad453fd2fc0c910f82ef31c18353fc774}\label{classloadbalancer_ad453fd2fc0c910f82ef31c18353fc774}} 
+\index{loadbalancer@{loadbalancer}!loadbalancer@{loadbalancer}}
+\index{loadbalancer@{loadbalancer}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{loadbalancer()}{loadbalancer()}}
+{\footnotesize\ttfamily loadbalancer\+::loadbalancer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor\+: initialized system time to 0. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloadbalancer_adb46d81d993a749071697e69a290a7aa}\label{classloadbalancer_adb46d81d993a749071697e69a290a7aa}} 
+\index{loadbalancer@{loadbalancer}!add\_request@{add\_request}}
+\index{add\_request@{add\_request}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{add\_request()}{add\_request()}}
+{\footnotesize\ttfamily void loadbalancer\+::add\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrequest}{request}}}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a request to the queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & variable of type request which is defined in request.\+cpp. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classloadbalancer_af0a2c5d7f5b0b657ef5fc9c25838a7f7}\label{classloadbalancer_af0a2c5d7f5b0b657ef5fc9c25838a7f7}} 
+\index{loadbalancer@{loadbalancer}!create\_random\_request@{create\_random\_request}}
+\index{create\_random\_request@{create\_random\_request}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{create\_random\_request()}{create\_random\_request()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrequest}{request}} loadbalancer\+::create\+\_\+random\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+creates and returns random request with ip source,destination, and process time values.
+
+\begin{DoxyReturn}{Returns}
+randomly generated request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_aed0c273a09a1539948c9b7efdbd3b4a8}\label{classloadbalancer_aed0c273a09a1539948c9b7efdbd3b4a8}} 
+\index{loadbalancer@{loadbalancer}!get\_request@{get\_request}}
+\index{get\_request@{get\_request}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{get\_request()}{get\_request()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrequest}{request}} loadbalancer\+::get\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtains request content and then removes the request from the queue.
+
+\begin{DoxyReturn}{Returns}
+Request that was removed from queue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_a84910810fca4d9aeb75517515a60d661}\label{classloadbalancer_a84910810fca4d9aeb75517515a60d661}} 
+\index{loadbalancer@{loadbalancer}!get\_time@{get\_time}}
+\index{get\_time@{get\_time}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{get\_time()}{get\_time()}}
+{\footnotesize\ttfamily int loadbalancer\+::get\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter\+: gets time of load balancer \mbox{\Hypertarget{classloadbalancer_ac50cf405c85d9330f9f29a2582b850eb}\label{classloadbalancer_ac50cf405c85d9330f9f29a2582b850eb}} 
+\index{loadbalancer@{loadbalancer}!inc\_time@{inc\_time}}
+\index{inc\_time@{inc\_time}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{inc\_time()}{inc\_time()}}
+{\footnotesize\ttfamily void loadbalancer\+::inc\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Incrementer\+: increases the clock cycle of load balancer by 1. \mbox{\Hypertarget{classloadbalancer_a498c6da3c1d10bd443a19c0c714bc1f9}\label{classloadbalancer_a498c6da3c1d10bd443a19c0c714bc1f9}} 
+\index{loadbalancer@{loadbalancer}!is\_rq\_empty@{is\_rq\_empty}}
+\index{is\_rq\_empty@{is\_rq\_empty}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{is\_rq\_empty()}{is\_rq\_empty()}}
+{\footnotesize\ttfamily bool loadbalancer\+::is\+\_\+rq\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if request\+Queue is empty and false otherwise
+
+\begin{DoxyReturn}{Returns}
+bool, true if request queue empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_ace2478d5c442563e1861ad7cb8d1cd56}\label{classloadbalancer_ace2478d5c442563e1861ad7cb8d1cd56}} 
+\index{loadbalancer@{loadbalancer}!rq\_size@{rq\_size}}
+\index{rq\_size@{rq\_size}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{rq\_size()}{rq\_size()}}
+{\footnotesize\ttfamily int loadbalancer\+::rq\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the size/length of the queue
+
+\begin{DoxyReturn}{Returns}
+int, size/length of request\+Queue 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+loadbalancer.\+cpp\end{DoxyCompactItemize}
